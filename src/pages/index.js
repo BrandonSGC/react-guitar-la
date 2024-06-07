@@ -1,1 +1,4 @@
 export * from './Home';
+export * from './AboutUs';
+export * from './/Blog';
+export * from './Store';
