@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Home, AboutUs, Blog, Store } from "./pages/";
-import { Header } from "./layouts";
+import { Footer, Header } from "./layouts";
+import { ScrollToTop } from "./components";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Route path="/store" element={<Store />} />
         <Route path="/*" element={<Home />} />
       </Routes>
+      <Footer />
+      <ScrollToTop />
     </>
   );
 }

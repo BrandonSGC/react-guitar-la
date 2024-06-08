@@ -3,3 +3,4 @@ export * from './NavBar';
 export * from './GuitarCard';
 export * from './Heading';
 export * from './BlogEntryCard';
+export * from './ScrollToTop';
