@@ -11,7 +11,11 @@ export const Header = () => {
   }, [pathname]);
 
   return (
-    <header className="relative py-12 bg-center bg-cover bg-header-gradient">
+    <header
+      className={`relative py-12 bg-center bg-cover md:h-auto bg-header-gradient ${
+        isHome ? "h-screen" : ""
+      }`}
+    >
       <Container>
         <div className="flex items-center justify-between gap-10">
           <Link to={"/"}>
