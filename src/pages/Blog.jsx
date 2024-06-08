@@ -1,7 +1,9 @@
-import React from 'react'
+import { BlogSection } from "../layouts";
 
 export const Blog = () => {
   return (
-    <div>Blog</div>
-  )
-}
+    <>
+      <BlogSection />
+    </>
+  );
+};

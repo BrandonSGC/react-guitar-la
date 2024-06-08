@@ -1,7 +1,9 @@
-import React from 'react'
+import { StoreSection } from "../layouts";
 
 export const Store = () => {
   return (
-    <div>Store</div>
-  )
-}
+    <>
+      <StoreSection />
+    </>
+  );
+};
