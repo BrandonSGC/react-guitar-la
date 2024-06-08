@@ -1,7 +1,9 @@
-import React from 'react'
+import { AboutUsSection } from "../layouts";
 
 export const AboutUs = () => {
   return (
-    <div>AboutUs</div>
-  )
-}
+    <>
+      <AboutUsSection />
+    </>
+  );
+};
