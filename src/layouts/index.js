@@ -1,0 +1,6 @@
+export * from './Header'
+export * from './StoreSection'
+export * from './PromoSection'
+export * from './BlogSection'
+export * from './AboutUsSection'
+export * from './Footer'
