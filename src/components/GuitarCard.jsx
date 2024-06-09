@@ -11,7 +11,7 @@ export const GuitarCard = ({ id, imageURL, name, price, description }) => {
         <p>{description}</p>
         <span className="text-5xl font-black text-yellow-600">${price}</span>
         <Link
-          to={`guitar/${id}`}
+          to={`/store/guitar/${id}`}
           className="block px-8 py-2 text-sm font-bold text-center uppercase border-2 border-yellow-600 hover:bg-yellow-600 hover:text-white"
         >
           Ver Producto
