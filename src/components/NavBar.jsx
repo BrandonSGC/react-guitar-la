@@ -13,7 +13,7 @@ export const NavBar = () => {
       />
 
       <nav
-        className={`absolute backdrop-blur-3xl bg-stone-700-700 bg-opacity-50 md:bg-opacity-100 p-4 md:p-0 top-0 right-0 w-[70%] h-screen flex flex-col gap-5 text-white md:flex-row md:bg-transparent md:backdrop-blur-none md:relative z-10 md:h-auto ${
+        className={`absolute backdrop-blur-3xl bg-stone-700 bg-opacity-50 md:bg-opacity-100 p-4 md:p-0 top-0 right-0 w-[70%] h-screen flex flex-col gap-5 text-white md:flex-row md:bg-transparent md:backdrop-blur-none md:relative z-10 md:h-auto ${
           showNavBar ? "" : "hidden md:flex"
         }`}
       >
