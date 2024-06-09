@@ -5,9 +5,9 @@ export default {
     extend: {
       backgroundImage: {
         "header-gradient":
-          "linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/header.jpg')",
+          "linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/header.jpg')",
         "courses-gradient":
-          "linear-gradient(to right, rgb(0 0 0 / .65), rgb( 0 0 0 / .65)), url('../img/cursos_bg.jpg')",
+          "linear-gradient(to right, rgb(0 0 0 / .65), rgb( 0 0 0 / .65)), url('/img/cursos_bg.jpg')",
       },
     },
   },

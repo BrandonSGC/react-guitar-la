@@ -3,7 +3,7 @@ import { guitars } from "../data/guitars";
 
 export const StoreSection = () => {
   return (
-    <main className="py-12">
+    <main className="py-20">
       <Container>
         <Heading text="Nuestra Colección" />
 
