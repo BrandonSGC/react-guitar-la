@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../hooks";
 
 export const GuitarDetails = ({ guitar }) => {
   const navigate = useNavigate();
-  const { name, description, price, imageURL, characteristics } = guitar;
+  const { id, name, description, price, imageURL, characteristics } = guitar;
+  const { addItem } = useCart();
 
   const onAddToCart = () => {
-    // TODO: Add guitar to cart.
+    addItem({ id, imageURL, name, price });
   };
 
   return (

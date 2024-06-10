@@ -2,10 +2,11 @@ import { Route, Routes } from "react-router-dom";
 import { Home, AboutUs, Blog, Store, Guitar } from "./pages/";
 import { Footer, Header } from "./layouts";
 import { ScrollToTop } from "./components";
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <Header />
       <Routes>
         <Route path="/home" element={<Home />} />
@@ -17,7 +18,7 @@ function App() {
       </Routes>
       <Footer />
       <ScrollToTop />
-    </>
+    </CartProvider>
   );
 }
 

@@ -1,14 +1,9 @@
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Container, NavBar } from "../components";
-import { Link, useLocation } from "react-router-dom";
+import { useHome } from "../hooks";
 
 export const Header = () => {
-  const [isHome, setIsHome] = useState(false);
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    pathname === "/" ? setIsHome(true) : setIsHome(false);
-  }, [pathname]);
+  const { isHome } = useHome();
 
   return (
     <header
