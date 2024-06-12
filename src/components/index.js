@@ -7,3 +7,7 @@ export * from './ScrollToTop';
 export * from './GuitarDetails';
 export * from './ShoppingCart';
 export * from './CartItem';
+export * from './CartTable';
+export * from './Modal';
+export * from './CartForm';
+export * from './Spinner';

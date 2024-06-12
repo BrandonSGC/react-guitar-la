@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CartIcon } from "../assets";
 import { useCart, useHome, useOutsideClick } from "../hooks";
-import { CartItem } from "./";
+import { CartTable } from "./";
 import { Link } from "react-router-dom";
 
 export const ShoppingCart = () => {
@@ -14,43 +14,33 @@ export const ShoppingCart = () => {
     <div className="relative" ref={cartRef}>
       <CartIcon
         onClick={() => setShowCart(!showCart)}
-        className={`block mx-auto size-10 hover:cursor-pointer text-yellow-600 hover:text-yellow-700 
+        className={`mx-auto size-10 hover:cursor-pointer  
         ${
-          isHome &&
-          "md:bg-black md:p-1 md:backdrop-blur md:rounded-full md:bg-opacity-40"
+          isHome
+            ? "md:bg-black md:p-1 md:backdrop-blur md:rounded-full md:bg-opacity-40 text-white hover:scale-105"
+            : "text-yellow-600 hover:text-yellow-700"
         }`}
       />
       {showCart && (
         <>
           {/* Shopping cart for tablets and desktops */}
-          <table className="absolute right-0 hidden p-4 text-black bg-white rounded shadow md:block">
-            <thead>
-              <tr className="flex items-center justify-between gap-2 w-96">
-                <th className="px-4 py-2">Producto</th>
-                <th className="px-4 py-2">Cantidad</th>
-                <th className="px-4 py-2">Precio</th>
-              </tr>
-            </thead>
-            <tbody>
-              {items.length === 0 && (
-                <tr>
-                  <td className="w-full py-2 text-center">
-                    <p>No hay artículos en el carrito en este momento...</p>
-                  </td>
-                </tr>
+          <div className="absolute right-0 hidden p-4 text-black bg-white rounded shadow-xl md:block">
+            <CartTable items={items} />
+            <div className="flex flex-col gap-2">
+              {items.length !== 0 && (
+                <Link
+                  to="/store/cart"
+                  className="block w-full px-8 py-2 text-sm font-bold text-center uppercase border-2 border-yellow-600 hover:bg-yellow-600 hover:text-white"
+                  onClick={() => setShowCart(!showCart)}
+                >
+                  Confirmar
+                </Link>
               )}
-
-              {items.map((item) => (
-                <CartItem key={item.id} {...item} />
-              ))}
-
-              <tr className="flex py-2 font-bold border-t border-yellow-600">
-                <td className="w-full font-bold text-right">
-                  Total: $<span className="font-normal">{totalPrice}</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+              <p className="text-xl font-bold text-right">
+                Total: <span className="font-normal">${totalPrice}</span>
+              </p>
+            </div>
+          </div>
 
           {/* Shopping cart for mobile */}
           <div className="p-4 text-black bg-white rounded shadow md:hidden">
@@ -63,7 +53,7 @@ export const ShoppingCart = () => {
               </p>
             </div>
             <Link
-              to="/cart"
+              to="/store/cart"
               className="block px-8 py-2 text-sm font-bold text-center uppercase border-2 border-yellow-600 hover:bg-yellow-600 hover:text-white"
             >
               Ver Carrito
