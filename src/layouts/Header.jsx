@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, NavBar } from "../components";
 import { useHome } from "../hooks";
+import { guitars } from "../data/guitars";
 
 export const Header = () => {
+  const [guitar, setGuitar] = useState(
+    guitars.find((guitar) => guitar.id === 1)
+  );
   const { isHome } = useHome();
 
   return (
@@ -26,14 +31,15 @@ export const Header = () => {
 
         {isHome && (
           <div className="w-3/4 my-20 space-y-6 text-white lg:w-1/2">
-            <h1 className="font-black text-7xl">Modelo VAI</h1>
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-              nostrum exercitationem tenetur ducimus. Rerum ipsum beatae odio,
-              sapiente harum hic.
+            <h1 className="font-black text-7xl">{guitar?.name}</h1>
+            <p className="text-xl">{guitar?.description}</p>
+            <p className="text-6xl font-black text-yellow-600">
+              ${guitar?.price}
             </p>
-            <p className="text-6xl font-black text-yellow-600">$399</p>
-            <Link className="inline-block px-8 py-2 font-bold uppercase border border-yellow-600 hover:bg-yellow-600">
+            <Link
+              to={`/store/guitar/${guitar.id}`}
+              className="inline-block px-8 py-2 font-bold uppercase border border-yellow-600 hover:bg-yellow-600"
+            >
               Ver Producto
             </Link>
           </div>
@@ -43,7 +49,7 @@ export const Header = () => {
       {isHome && (
         <img
           className="absolute bottom-0 right-0 hidden lg:block"
-          src="/img/header_guitarra.png"
+          src="/public/img/header_guitarra.png"
           alt="guitarra header"
         />
       )}

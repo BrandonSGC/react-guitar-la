@@ -13,7 +13,7 @@ export const GuitarDetails = ({ guitar }) => {
   return (
     <div className="grid md:gap-5 md:grid-cols-2">
       <div className="flex items-center justify-center ">
-        <img className="max-w-64" src={imageURL} alt="guitar" />
+        <img className="w-44 md:w-80 lg:w-64" src={imageURL} alt="guitar" />
       </div>
 
       <div className="flex flex-col justify-center space-y-5">
