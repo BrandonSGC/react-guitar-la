@@ -49,7 +49,7 @@ export const Header = () => {
       {isHome && (
         <img
           className="absolute bottom-0 right-0 hidden lg:block"
-          src="/public/img/header_guitarra.png"
+          src="/img/header_guitarra.png"
           alt="guitarra header"
         />
       )}

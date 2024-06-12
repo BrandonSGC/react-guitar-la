@@ -11,13 +11,16 @@ export const CartForm = () => {
     reset,
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     setShowMessage(true);
-    reset();
 
     const timer = setTimeout(() => {
       setShowMessage(false);
     }, 3000);
+
+    console.log(data);
+    reset();
     return () => clearTimeout(timer);
   };
 
@@ -103,7 +106,10 @@ export const CartForm = () => {
         </p>
       )}
 
-      <button className="block px-8 py-2 font-bold text-center text-white uppercase bg-yellow-600 border cursor-pointer hover:bg-yellow-700">
+      <button
+        className="block px-8 py-2 font-bold text-center text-white uppercase bg-yellow-600 border cursor-pointer hover:bg-yellow-700 disabled:opacity-50"
+        disabled={isSubmitting}
+      >
         Confirmar
       </button>
     </form>
