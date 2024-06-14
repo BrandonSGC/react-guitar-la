@@ -12,7 +12,7 @@ export const Header = () => {
 
   return (
     <header
-      className={`relative py-12 bg-center bg-cover md:h-auto bg-header-gradient ${
+      className={`relative py-12 bg-center bg-cover md:h-auto bg-header-gradient overflow-hidden ${
         isHome ? "h-screen" : ""
       }`}
     >
@@ -30,7 +30,7 @@ export const Header = () => {
         </div>
 
         {isHome && (
-          <div className="w-3/4 my-20 space-y-6 text-white lg:w-1/2">
+          <div className="w-3/4 my-20 space-y-6 text-white lg:w-1/2 fadeRight">
             <h1 className="font-black text-7xl">{guitar?.name}</h1>
             <p className="text-xl">{guitar?.description}</p>
             <p className="text-6xl font-black text-yellow-600">
@@ -48,7 +48,7 @@ export const Header = () => {
 
       {isHome && (
         <img
-          className="absolute bottom-0 right-0 hidden lg:block"
+          className="absolute bottom-0 right-0 hidden lg:block fadeLeft"
           src="/img/header_guitarra.png"
           alt="guitarra header"
         />
