@@ -12,8 +12,8 @@ export const Header = () => {
 
   return (
     <header
-      className={`relative py-12 bg-center bg-cover md:h-auto bg-header-gradient overflow-hidden ${
-        isHome ? "h-screen" : ""
+      className={`relative py-12 bg-center bg-cover md:h-auto bg-header-gradient ${
+        isHome ? "h-screen overflow-hidden" : ""
       }`}
     >
       <Container>
