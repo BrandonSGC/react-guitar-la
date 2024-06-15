@@ -6,20 +6,25 @@ export const AboutUsSection = () => {
       <Heading text="Nosotros" />
       <Container className="grid gap-10 lg:grid-cols-2">
         <div className="flex items-center justify-center">
-          <img src="/img/nosotros.jpg" alt="about us image" />
+          <img src="/img/nosotros.jpg" alt="imagen sobre nosotros" />
         </div>
         <div className="flex flex-col items-center justify-center gap-4 text-xl">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            dignissimos architecto autem beatae quidem, libero inventore labore
-            incidunt tempora consectetur harum, praesentium quasi facere?
-            Placeat dolores quidem cumque ratione animi.
+            Guitar LA es tu destino principal para todo lo relacionado con
+            guitarras. Ubicados en el corazón de Los Ángeles, nos enorgullecemos
+            de ofrecer una selección diversa de guitarras de las marcas más
+            reconocidas en la industria. Ya sea que seas un principiante
+            buscando tu primera guitarra o un profesional experimentado en busca
+            de un instrumento de alta gama, tenemos algo para satisfacer las
+            necesidades de cada músico.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ea
-            voluptatem debitis cumque quas sunt eligendi, dicta quasi fuga quis?
-            Laudantium quod nostrum corporis sequi nesciunt placeat maiores
-            eligendi sapiente.
+            Nuestra tienda cuenta con una amplia gama de guitarras acústicas,
+            eléctricas y bajos, así como accesorios, amplificadores y más.
+            También ofrecemos clases de guitarra, reparaciones y ajustes
+            personalizados para asegurar que tu instrumento suene lo mejor
+            posible. Visítanos hoy y deja que nuestro personal experto te guíe
+            en tu viaje musical.
           </p>
         </div>
       </Container>

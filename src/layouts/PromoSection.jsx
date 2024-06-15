@@ -8,10 +8,10 @@ export const PromoSection = () => {
         <div className="flex flex-col items-center col-start-2 col-end-3 space-y-10">
           <Heading text="Aprende a tocar guitarra" />
           <p className="text-xl leading-relaxed text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            porro cum, sed fuga sunt officiis beatae accusantium numquam
-            temporibus molestiae hic eveniet harum dicta neque iusto facere!
-            Placeat, deleniti earum!
+            Descubre el apasionante mundo de la música y desarrolla tus
+            habilidades con nuestra completa guía para aprender a tocar la
+            guitarra. Ya seas principiante busques mejorar tus técnicas, nuestro
+            curso está diseñado para ayudarte a alcanzar tus metas musicales.
           </p>
           <Link
             to={`/`}

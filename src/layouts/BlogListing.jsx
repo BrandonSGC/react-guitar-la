@@ -1,7 +1,7 @@
 import { BlogEntryCard, Container, Heading } from "../components";
-import { blogEntries } from "../data";
+import { blogs } from "../data";
 
-export const BlogSection = () => {
+export const BlogListing = () => {
   return (
     <section className="py-20">
       <Container>
@@ -9,7 +9,7 @@ export const BlogSection = () => {
 
         {/* List Blogs Entries */}
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {blogEntries.map((entry) => (
+          {blogs.map((entry) => (
             <BlogEntryCard key={entry.id} {...entry} />
           ))}
         </div>

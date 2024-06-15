@@ -1,2 +1,2 @@
 export * from './guitars';
-export * from './blogEntries';
+export * from './blogs';
