@@ -9,7 +9,7 @@ export const GuitarCard = ({ id, imageURL, name, price, description }) => {
       </div>
       <div className="flex flex-col justify-center gap-3">
         <h3 className="text-xl font-black">{name}</h3>
-        <p>{description}</p>
+        <p className="line-clamp-3">{description}</p>
         <span className="text-5xl font-black text-yellow-600">${price}</span>
         <Link
           to={`/store/guitar/${id}`}
