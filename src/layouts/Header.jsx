@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, NavBar } from "../components";
+import { Container, NavBar, Image } from "../components";
 import { useHome } from "../hooks";
 import { guitars } from "../data/guitars";
 
@@ -23,6 +23,7 @@ export const Header = () => {
               className="w-[200px] md:w-full"
               src="/img/logo.svg"
               alt="logo"
+              loading="lazy"
             />
           </Link>
 
@@ -47,7 +48,7 @@ export const Header = () => {
       </Container>
 
       {isHome && (
-        <img
+        <Image
           className="absolute bottom-0 right-0 hidden lg:block fadeLeft"
           src="/img/header_guitarra.png"
           alt="guitarra header"

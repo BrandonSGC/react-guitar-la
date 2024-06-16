@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import { Image } from "./";
 
 export const GuitarCard = ({ id, imageURL, name, price, description }) => {
   return (
     <div className="flex">
       <div className="flex items-center justify-center">
-        <img src={imageURL} alt={`${name} image`} />
+        <Image src={imageURL} alt={`${name} image`} loading="lazy"/>
       </div>
       <div className="flex flex-col justify-center gap-3">
         <h3 className="text-xl font-black">{name}</h3>

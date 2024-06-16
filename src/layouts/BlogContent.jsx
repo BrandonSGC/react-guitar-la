@@ -1,4 +1,4 @@
-import { Tag } from "../components";
+import { Image, Tag } from "../components";
 
 export const BlogContent = ({
   title,
@@ -14,7 +14,7 @@ export const BlogContent = ({
       {/* BLOG HEADER */}
       <header>
         <h1 className="text-4xl font-black md:text-5xl">{title}</h1>
-        <img className="my-5 w-80" src={image} alt={title} loading="lazy" />
+        <Image className="my-5 w-80" src={image} alt={title} />
         <p className="text-lg">{description}</p>
       </header>
 

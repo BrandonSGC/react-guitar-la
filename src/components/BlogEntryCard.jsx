@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import { Image } from "./";
 
 export const BlogEntryCard = ({ id, image, title, date, description }) => {
   return (
     <div className="space-y-2">
-      <img src={image} alt="blog image" />
+      <Image src={image} alt="blog image" />
       <h3 className="text-2xl">{title}</h3>
       <span className="block text-yellow-600">{date}</span>
       <p className="line-clamp-3">{description}</p>

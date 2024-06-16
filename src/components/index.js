@@ -12,3 +12,4 @@ export * from './Modal';
 export * from './CartForm';
 export * from './Spinner';
 export * from './Tag';
+export * from './Image';
